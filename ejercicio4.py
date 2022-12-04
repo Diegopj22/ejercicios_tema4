@@ -35,3 +35,22 @@ def secante(x0,x1,tol):
     return x2
 
 print (secante(0,1,0.0001))
+
+
+#Desarrollar un algoritmo numérico iterativo que permita calcular el método de Newton-Raphson de una función f(x).
+
+import math
+
+def f(x):
+    return math.exp(-x) -x
+
+def df(x):
+    return -math.exp(-x) -1
+
+def newton (x0,tol):
+    while abs(f(x0))>tol:
+        x0=x0-f(x0)/df(x0)
+    return x0
+
+print (newton(0,0.0001))
+
