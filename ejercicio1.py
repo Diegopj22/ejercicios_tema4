@@ -120,7 +120,16 @@ def generar_diccionario(raiz, cadena=''):
 
 generar_diccionario(bosque[0])
 
+#ordenar diccionario de 
+dic = dict(sorted(dic.items(), key=lambda item: item[1]))
+#"Espacio"y"coma" al final
+dic["Espacio"] = dic.pop("Espacio")
+dic["coma"] = dic.pop("coma")
+
 print(dic)
+
+
+
 
 
 
